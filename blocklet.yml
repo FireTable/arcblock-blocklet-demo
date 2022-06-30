@@ -1,11 +1,12 @@
 name: chun-craco
+version: 0.1.2
 title: chun-craco
 description: A Blocklet Server blocklet
 keywords:
   - blocklet
   - react
 group: static
-did: z8iZiVuh9TBS2hSyGBcGxcnv3VJaoZZrTE5YP
+did: z8iZki5XuhkANcHS3eUGbk4m56eSUNc5zughi
 main: build
 author:
   name: 清纯男程序员蠢蠢
@@ -13,8 +14,7 @@ author:
 repository:
   type: git
   url: git+https://github.com/blocklet/create-blocklet.git
-specVersion: 1.1.1
-version: 0.1.0
+specVersion: 1.2.7
 logo: logo.png
 files:
   - logo.png
@@ -42,6 +42,8 @@ requirements:
 scripts:
   dev: npm run start
 environments: []
-capabilities: {}
+capabilities:
+  clusterMode: false
+  component: true
 screenshots: []
 children: []
