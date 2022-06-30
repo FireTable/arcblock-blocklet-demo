@@ -1,6 +1,13 @@
 const port = process.env.BLOCKLET_PORT || process.env.PORT || 3000;
 
 module.exports = {
+  webpack: {
+    configure: {
+      output: {
+        publicPath: '',
+      },
+    },
+  },
   devServer: {
     port,
     client: {
