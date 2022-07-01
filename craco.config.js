@@ -1,12 +1,19 @@
 const port = process.env.BLOCKLET_PORT || process.env.PORT || 3000;
+const whenDev = process.env.NODE_ENV === 'development';
+
+const webpackConfig = whenDev
+  ? {
+      configure: {
+        output: {
+          publicPath: '',
+        },
+      },
+    }
+  : {};
 
 module.exports = {
   webpack: {
-    configure: {
-      output: {
-        publicPath: '',
-      },
-    },
+    ...webpackConfig,
   },
   devServer: {
     port,
